@@ -2,91 +2,226 @@
 .bg-light {
     background-color: #f8f9fa;
 }
-.vl {
-    border-left: 6px solid #0C4477;
-    height: 20px;
-  }
-.side-by-side {
-    display: flex;
-    align-items: center; /* Vertically aligns the items */
- 
+.d-flex{
+   margin-left: 48%;
 }
-.h6{
-    margin-left: 6.5%;
+@media (max-width: 768px) {
+ .d-flex{
+    margin-left: 29%;
+ }
 }
-.h4{
-    margin-left: 1%;
-    margin-top: 0.4%;
+.btn-custom {
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    width: 100%; /* Full width buttons */
+    color: #6c757d; /* Grey text */
+    background-color: #ffffff; /* White background */
+    border-radius: 12px; /* Rounded edges for the button */
+    text-align: left; /* Align text to the left */
+    padding: 22px 25px; /* Padding for larger click area */
+    margin-bottom: 33px; /* Margin bottom for spacing */
+    overflow: hidden; /* Ensures no overflow of pseudo-elements */
+    box-shadow: 0 4px 8px rgba(65, 65, 65, 0.1);
 }
-.side-by-side h6 {
-    margin-right: 0px; /* Space between the h6 and h3 elements */
-  
+.btn-custom::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 7px; /* Width of the colored part */
+    height: 100%; /* Full height of the button */
+    background-color: #50029e; /* Example purple color, change as needed */
+    border-radius: 18px 0 0 18px; /* Rounded left side to match button border */
 }
-.icon-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 340px; /* Adjust as needed */
-    padding-top: 10px;
+.btn-custom:hover {
+    background-color: #e9ecef; /* Light grey background on hover */
 }
 
-.language-selector {
-    margin-right: 20px; /* Space between language selector and social icons */
+.subscription-banner {
+    background-color: #4B0082; /* Deep purple background */
+    color: white;
+    padding: 45px;
+    border-radius: 8px; /* Rounded corners */
 }
-
-.spacer {
-    width: 100px; /* Adjust as needed */
-}
-.spacer2 {
-    width: 40px; /* Adjust as needed */
-}
-.language-selector .nav-item {
-    margin: 0 4px; /* Space between language options */
-    text-decoration: none;
-    color: #1e7fee; /* Adjust color as needed */
-    font-size: 16px; /* Adjust font size as needed */
-}
-.icons .nav-item {
-    margin: 0 3px; /* Space between language options */
-    text-decoration: none;
-    color: #1e7fee; /* Adjust color as needed */
-    font-size: 16px; /* Adjust font size as needed */
-}
-.language-selector ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-}
-.social-icons .nav-item {
-    text-decoration: none;
-    margin: 0 3px; /* Space between icons */
-    font-size: 20px; /* Adjust size as needed */
-}
-#logo_div{
-    display: flex;
-    margin-right: 68.5%;
-    margin-top: -5%;
-    width: 255px;
-}
-#imrs_logo{
-    width: 43%;
-    margin-right: 10px; 
-    margin-left: -615px;
-}
-#logo_imrs{
-    margin-left: -5%;
+.subscription-form {
     display: flex;
     align-items: center;
-    text-decoration: none;
+    justify-content: space-between; /* Spacing between text and form elements */
 }
-#logo_imrs_name{
-    margin: 1% -45% 0% -1%;
-    font-size: 14.5px; /* Adjust the font size as needed */
-    line-height: 1.2; /* Adjust line height for better spacing */
-    color: black;
+.subscription-form input[type="email"] {
+    border: 1px solid #fdfdfd; /* Yellow border */
+    background-color: transparent;
+    color: white;
+    padding: 8px;
+    width: 40%; /* Width of the input field */
+    border-radius: 5px;
+    margin-left: 122px;
 }
+.subscription-form button {
+    background-color: #FFD700; /* Yellow background */
+    border: none;
+    padding: 8px 16px;
+    color: #4B0082; /* Text color */
+    cursor: pointer; /* Cursor indicates clickable */
+    border-radius: 10px;
+}
+/* Ensuring the button stays at the right and elements stack vertically on smaller screens */
+@media (max-width: 768px) {
+    .subscription-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .subscription-form input[type="email"] {
+        margin-bottom: 10px; /* Space between input and button on small screens */
+        width: 100%; /* Full width */
+        margin-left: 0px;
+    }
+    .subscription-form button {
+        width: 50%;
+    }
+}
+.navbar-custom {
+    background-color: #fff;
+    border-bottom: 2px solid #E0E0E0;
+}
+.navbar-custom .navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.navbar-custom .nav-link {
+    color: #333;
+    text-align: center;
+}
+.navbar-custom .nav-link:hover {
+    color: #000;
+    background-color: #6C757D;
+    border-radius: 5px;
+}
+.nav-item {
+    position: relative;
+    padding-right: 15px;
+}
+.nav-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50px;
+    background-color: #E0E0E0;
+}
+.header-section {
+    background-color: #4B0082;
+    color: #fff;
+    padding: 160px 0;
+}
+.header-section .btn-custom {
+    background-color: #ADFF2F;
+    color: #000;
+    border: none;
+}
+.statistics-section {
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+.statistics-section h3 {
+    color: #4B0082;
+}
+.statistics-section .col-md-3 h4 {
+    color: #4B0082;
+}
+.statistics-section .col-md-3 p {
+    color: #6C757D;
+}
+
+@media (max-width: 768px) {
+    #img-fluid {
+        width: 150%; /* Adjust as needed for smaller screens */
+    }
+}
+@media (max-width: 576px) {
+    #img-fluid{
+        width: 120%; /* Adjust as needed for extra small screens */
+    }
+}
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.news-title {
+    background-color: #f4f7fe; /* Light gray background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+.text-muted {
+    color: #6C757D;
+}
+.card-custom {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.card-custom img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card-body-custom {
+    padding: 15px;
+    flex: 1;
+}
+.card-title {
+    font-weight: bold;
+}
+.card-text {
+    color: #6C757D;
+}
+.row-equal {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-equal {
+    display: flex;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 30px; /* Adds spacing between cards on smaller screens */
+}
+hr.custom-hr {
+    width: 61%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the hr line */
+    border: 0px solid #2f005f; /* Adjust the border style as needed */
+    margin-top: 30px;
+}
+.newsletter-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust the gap as needed */
+}
+.newsletter-text {
+    color: white;
+}
+.newsletter-input {
+    flex-grow: 5;
+}
+.date
+{
+    margin-top: 10px;
+    color: white;
+}
+hr{
+    margin: 0px;
+    color: #2f005f;
+    border: solid 0px #2f005f;
+}
+
 
 :root {
     --primary: #1363C6;
@@ -179,13 +314,13 @@ h6,
 }
 .navbar {
     padding: 11px 0 !important;
-    height: 75px;
+    height: 95px;
 }
 
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 0;
-    color: rgba(255, 255, 255, .7);
+    color: rgba(32, 32, 32, 0.7);
     outline: none;
 }
 
@@ -603,7 +738,23 @@ h6,
     letter-spacing: 1px;
     box-shadow: none;
 }
+.footer .copyright2 {
+    padding: 25px 0;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(256, 256, 256, .1);
+}.footer .copyright2 {
+    padding: 25px 0;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(256, 256, 256, .1);
+}
 
+.footer .copyright2 a {
+    color: rgba(255,255,255,.5);
+}
+
+.footer .copyright2 a:hover {
+    color: #FFFFFF;
+}
 .footer .copyright {
     padding: 25px 0;
     font-size: 14px;
