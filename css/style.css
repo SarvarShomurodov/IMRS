@@ -2,11 +2,24 @@
 .bg-light {
     background-color: #f8f9fa;
 }
-.d-flex{
+/* About start */
+.subscription-banner-about {
+    background-color: #112e51; /* Deep purple background */
+    color: white;
+    padding: 45px;
+    border-radius: 20px; /* Rounded corners */
+}
+
+
+
+
+/* About end */
+.d-flex2{
    margin-left: 48%;
 }
+
 @media (max-width: 768px) {
- .d-flex{
+ .d-flex2{
     margin-left: 29%;
  }
 }
